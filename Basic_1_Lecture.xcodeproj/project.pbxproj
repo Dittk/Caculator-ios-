@@ -7,24 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC0D2B3D28966DC40041AE4E /* home50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC0D2B3A28966DC40041AE4E /* home50x50@2x.png */; };
-		BC0D2B3E28966DC40041AE4E /* home300.png in Resources */ = {isa = PBXBuildFile; fileRef = BC0D2B3B28966DC40041AE4E /* home300.png */; };
-		BC0D2B3F28966DC40041AE4E /* home50x50@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC0D2B3C28966DC40041AE4E /* home50x50@3x.png */; };
 		BC2FCAD32893695C00CFC090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FCAD22893695C00CFC090 /* AppDelegate.swift */; };
 		BC2FCAD52893695C00CFC090 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FCAD42893695C00CFC090 /* SceneDelegate.swift */; };
 		BC2FCAD72893695C00CFC090 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FCAD62893695C00CFC090 /* ViewController.swift */; };
 		BC2FCADA2893695C00CFC090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2FCAD82893695C00CFC090 /* Main.storyboard */; };
 		BC2FCADC2893695D00CFC090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2FCADB2893695D00CFC090 /* Assets.xcassets */; };
 		BC2FCADF2893695D00CFC090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2FCADD2893695D00CFC090 /* LaunchScreen.storyboard */; };
-		BC2FCAE92893B38200CFC090 /* weather_icon_sun_cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2FCAE82893B38200CFC090 /* weather_icon_sun_cloud.png */; };
-		BC2FCAEB2893B93600CFC090 /* WeatherBG_Sun.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2FCAEA2893B93600CFC090 /* WeatherBG_Sun.png */; };
-		BCAB4E592895258F00974201 /* WeatherBG_Moon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAB4E582895258F00974201 /* WeatherBG_Moon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC0D2B3A28966DC40041AE4E /* home50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home50x50@2x.png"; sourceTree = "<group>"; };
-		BC0D2B3B28966DC40041AE4E /* home300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home300.png; sourceTree = "<group>"; };
-		BC0D2B3C28966DC40041AE4E /* home50x50@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home50x50@3x.png"; sourceTree = "<group>"; };
 		BC2FCACF2893695C00CFC090 /* Basic_1_Lecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basic_1_Lecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2FCAD22893695C00CFC090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC2FCAD42893695C00CFC090 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,9 +24,6 @@
 		BC2FCADB2893695D00CFC090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC2FCADE2893695D00CFC090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC2FCAE02893695D00CFC090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC2FCAE82893B38200CFC090 /* weather_icon_sun_cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather_icon_sun_cloud.png; sourceTree = "<group>"; };
-		BC2FCAEA2893B93600CFC090 /* WeatherBG_Sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeatherBG_Sun.png; sourceTree = "<group>"; };
-		BCAB4E582895258F00974201 /* WeatherBG_Moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeatherBG_Moon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +63,6 @@
 				BC2FCADB2893695D00CFC090 /* Assets.xcassets */,
 				BC2FCADD2893695D00CFC090 /* LaunchScreen.storyboard */,
 				BC2FCAE02893695D00CFC090 /* Info.plist */,
-				BC2FCAE82893B38200CFC090 /* weather_icon_sun_cloud.png */,
-				BC2FCAEA2893B93600CFC090 /* WeatherBG_Sun.png */,
-				BCAB4E582895258F00974201 /* WeatherBG_Moon.png */,
-				BC0D2B3A28966DC40041AE4E /* home50x50@2x.png */,
-				BC0D2B3C28966DC40041AE4E /* home50x50@3x.png */,
-				BC0D2B3B28966DC40041AE4E /* home300.png */,
 			);
 			path = Basic_1_Lecture;
 			sourceTree = "<group>";
@@ -143,15 +125,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCAB4E592895258F00974201 /* WeatherBG_Moon.png in Resources */,
 				BC2FCADF2893695D00CFC090 /* LaunchScreen.storyboard in Resources */,
-				BC0D2B3F28966DC40041AE4E /* home50x50@3x.png in Resources */,
-				BC0D2B3E28966DC40041AE4E /* home300.png in Resources */,
 				BC2FCADC2893695D00CFC090 /* Assets.xcassets in Resources */,
-				BC2FCAE92893B38200CFC090 /* weather_icon_sun_cloud.png in Resources */,
-				BC2FCAEB2893B93600CFC090 /* WeatherBG_Sun.png in Resources */,
 				BC2FCADA2893695C00CFC090 /* Main.storyboard in Resources */,
-				BC0D2B3D28966DC40041AE4E /* home50x50@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
