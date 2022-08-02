@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BC2FCACE2893695C00CFC090"
                BuildableName = "Basic_1_Lecture.app"
-               BlueprintName = "Basic_1_Lecture"
-               ReferencedContainer = "container:Basic_1_Lecture.xcodeproj">
+               BlueprintName = "Caculate"
+               ReferencedContainer = "container:my_Caculate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,8 +46,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC2FCACE2893695C00CFC090"
             BuildableName = "Basic_1_Lecture.app"
-            BlueprintName = "Basic_1_Lecture"
-            ReferencedContainer = "container:Basic_1_Lecture.xcodeproj">
+            BlueprintName = "Caculate"
+            ReferencedContainer = "container:my_Caculate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC2FCACE2893695C00CFC090"
             BuildableName = "Basic_1_Lecture.app"
-            BlueprintName = "Basic_1_Lecture"
-            ReferencedContainer = "container:Basic_1_Lecture.xcodeproj">
+            BlueprintName = "Caculate"
+            ReferencedContainer = "container:my_Caculate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

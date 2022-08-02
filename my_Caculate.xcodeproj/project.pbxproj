@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC2FCACF2893695C00CFC090 /* Basic_1_Lecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basic_1_Lecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2FCACF2893695C00CFC090 /* Caculate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caculate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2FCAD22893695C00CFC090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC2FCAD42893695C00CFC090 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BC2FCAD62893695C00CFC090 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		BC2FCAD02893695C00CFC090 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC2FCACF2893695C00CFC090 /* Basic_1_Lecture.app */,
+				BC2FCACF2893695C00CFC090 /* Caculate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BC2FCACE2893695C00CFC090 /* Basic_1_Lecture */ = {
+		BC2FCACE2893695C00CFC090 /* Caculate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC2FCAE32893695D00CFC090 /* Build configuration list for PBXNativeTarget "Basic_1_Lecture" */;
+			buildConfigurationList = BC2FCAE32893695D00CFC090 /* Build configuration list for PBXNativeTarget "Caculate" */;
 			buildPhases = (
 				BC2FCACB2893695C00CFC090 /* Sources */,
 				BC2FCACC2893695C00CFC090 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Basic_1_Lecture;
+			name = Caculate;
 			productName = Basic_1_Lecture;
-			productReference = BC2FCACF2893695C00CFC090 /* Basic_1_Lecture.app */;
+			productReference = BC2FCACF2893695C00CFC090 /* Caculate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BC2FCACA2893695C00CFC090 /* Build configuration list for PBXProject "Basic_1_Lecture" */;
+			buildConfigurationList = BC2FCACA2893695C00CFC090 /* Build configuration list for PBXProject "my_Caculate" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BC2FCACE2893695C00CFC090 /* Basic_1_Lecture */,
+				BC2FCACE2893695C00CFC090 /* Caculate */,
 			);
 		};
 /* End PBXProject section */
@@ -343,7 +343,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC2FCACA2893695C00CFC090 /* Build configuration list for PBXProject "Basic_1_Lecture" */ = {
+		BC2FCACA2893695C00CFC090 /* Build configuration list for PBXProject "my_Caculate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC2FCAE12893695D00CFC090 /* Debug */,
@@ -352,7 +352,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC2FCAE32893695D00CFC090 /* Build configuration list for PBXNativeTarget "Basic_1_Lecture" */ = {
+		BC2FCAE32893695D00CFC090 /* Build configuration list for PBXNativeTarget "Caculate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC2FCAE42893695D00CFC090 /* Debug */,
