@@ -37,7 +37,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var button11: UIButton!
     @IBOutlet weak var buttonEql: UIButton!
     
-    var operateTemp: Int = 0 // 연산 결과 저장
+    var operateTempFloat: Float = 0.0 // 연산 결과 저장
+    var operateTempInt: Int = 0
     
     var operater: Character = " " // 연산 처리를 위한 버튼 식별
     var oprFirst: Bool = true // 연산 처리를 위한 첫 데이터 삽입 여부
@@ -50,7 +51,6 @@ class ViewController: UIViewController {
         result.layer.cornerRadius = 50
         result.layer.masksToBounds = true
         // 코너 radius 변경이 안될 시 선언
-        
     }
 
     override func viewDidAppear(_ animated: Bool) { // 버튼에 대한 속성(button1.bounds.width)으로 접근 시  appear 후에 적용
@@ -79,7 +79,6 @@ class ViewController: UIViewController {
         button10.layer.cornerRadius = button1.bounds.width / 2
         button11.layer.cornerRadius = button1.bounds.width / 2
         buttonEql.layer.cornerRadius = button1.bounds.width / 2
-        
     }
     
     // 숫자 버튼 영역 시작
@@ -89,7 +88,6 @@ class ViewController: UIViewController {
         isEnableOpr()
         initializeColor()
         result.text?.append("7")
-        
     }
     
     @IBAction func btn2Action(_ sender: Any) {
@@ -98,7 +96,6 @@ class ViewController: UIViewController {
         isEnableOpr()
         initializeColor()
         result.text?.append("8")
-        
     }
     
     @IBAction func btn3Action(_ sender: Any) {
@@ -107,7 +104,6 @@ class ViewController: UIViewController {
         isEnableOpr()
         initializeColor()
         result.text?.append("9")
-        
     }
     
     @IBAction func btn4Action(_ sender: Any) {
@@ -116,7 +112,6 @@ class ViewController: UIViewController {
         isEnableOpr()
         initializeColor()
         result.text?.append("4")
-        
     }
     
     @IBAction func btn5Action(_ sender: Any) {
@@ -125,7 +120,6 @@ class ViewController: UIViewController {
         isEnableOpr()
         initializeColor()
         result.text?.append("5")
-        
     }
     
     @IBAction func btn6Action(_ sender: Any) {
@@ -134,7 +128,6 @@ class ViewController: UIViewController {
         isEnableOpr()
         initializeColor()
         result.text?.append("6")
-        
     }
     
     @IBAction func btn7Action(_ sender: Any) {
@@ -143,7 +136,6 @@ class ViewController: UIViewController {
         isEnableOpr()
         initializeColor()
         result.text?.append("1")
-        
     }
     
     @IBAction func btn8Action(_ sender: Any) {
@@ -152,7 +144,6 @@ class ViewController: UIViewController {
         isEnableOpr()
         initializeColor()
         result.text?.append("2")
-        
     }
     
     @IBAction func btn9Action(_ sender: Any) {
@@ -161,7 +152,6 @@ class ViewController: UIViewController {
         isEnableOpr()
         initializeColor()
         result.text?.append("3")
-        
     }
     
     @IBAction func btn0Action(_ sender: Any) {
@@ -170,7 +160,6 @@ class ViewController: UIViewController {
         isEnableOpr()
         initializeColor()
         result.text?.append("0")
-        
     }
     
     @IBAction func btnDotAction(_ sender: Any) { //Detail
@@ -178,7 +167,6 @@ class ViewController: UIViewController {
         if !(result.text!.contains(".")) {
             result.text?.append(".")
         }
-
     }
     // 숫자 버튼 영역 끝
 
@@ -214,7 +202,6 @@ class ViewController: UIViewController {
         
         initializeColor()
         setColor(button: buttonMul)
-        
     }
     
     @IBAction func btnMinusAction(_ sender: Any) {
@@ -226,19 +213,16 @@ class ViewController: UIViewController {
         
         initializeColor()
         setColor(button: buttonMin)
-       
-
     }
     
     @IBAction func btnPlusAction(_ sender: Any) {
-        
+
         oprColorCnt = 1
         operater = "+"
         operate()
 
         initializeColor()
         setColor(button: buttonPlu)
-        
     }
     
     @IBAction func btnResultAction(_ sender: Any) {
@@ -296,47 +280,47 @@ class ViewController: UIViewController {
     
     func operate(){ // 연산 로직
         
-        let resultToInt = Int(result.text!)!
+        let resultToFloat = Float(result.text!)!
         
         switch operater{
         case "/":
             
             if(oprFirst == true){ //초기 값 일 시 연산을 하지않고 대입만 함
-                operateTemp = resultToInt
+                operateTempFloat = resultToFloat
                 oprFirst = false
             }
             else{
-                operateTemp = operateTemp / resultToInt
+                operateTempFloat = operateTempFloat / resultToFloat
             }
       
         case "x":
            
             if(oprFirst == true){
-                operateTemp = resultToInt
+                operateTempFloat = resultToFloat
                 oprFirst = false
             }
             else{
-                operateTemp = operateTemp * resultToInt
+                operateTempFloat = operateTempFloat * resultToFloat
             }
 
         case "-":
             
             if(oprFirst == true){
-                operateTemp = resultToInt
+                operateTempFloat = resultToFloat
                 oprFirst = false
             }
             else{
-                operateTemp = operateTemp - resultToInt
+                operateTempFloat = operateTempFloat - resultToFloat
             }
             
         case "+":
             
             if(oprFirst == true){
-                operateTemp = resultToInt
+                operateTempFloat = resultToFloat
                 oprFirst = false
             }
             else{
-                operateTemp = operateTemp + resultToInt
+                operateTempFloat = operateTempFloat + resultToFloat
             }
 
         default:
