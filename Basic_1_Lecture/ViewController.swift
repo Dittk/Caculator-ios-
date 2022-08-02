@@ -37,12 +37,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var button11: UIButton!
     @IBOutlet weak var buttonEql: UIButton!
     
-    var leftTemp: Int?
-    var rightTemp: Int?
-    var resultTemp: Int?
+    var operateTemp: Int = 0 // 연산 결과 저장
     
-    var oprCnt: Int = 0
-    var saveCnt: Int = 0
+    var operater: Character = " " // 연산 처리를 위한 버튼 식별
+    var oprFirst: Bool = true // 연산 처리를 위한 첫 데이터 삽입 여부
+    var oprColorCnt: Int = 0 //연산자 버튼 색상 카운트
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -188,11 +188,15 @@ class ViewController: UIViewController {
         
         initializeColor()
         result.text = "0"
+        operateTemp = 0
+        
     }
     
     @IBAction func btnDivisionAction(_ sender: Any) {
         
-        oprCnt = 1
+        oprColorCnt = 1
+        operater = "/"
+        operate()
         
         initializeColor()
         setColor(button: buttonDiv)
@@ -203,7 +207,10 @@ class ViewController: UIViewController {
     
     @IBAction func btnMultipleAction(_ sender: Any) {
         
-        oprCnt = 1
+        oprColorCnt = 1
+        operater = "x"
+        operate()
+
         
         initializeColor()
         setColor(button: buttonMul)
@@ -212,7 +219,11 @@ class ViewController: UIViewController {
     
     @IBAction func btnMinusAction(_ sender: Any) {
         
-        oprCnt = 1
+        oprColorCnt = 1
+        operater = "-"
+        operate()
+
+        
         initializeColor()
         setColor(button: buttonMin)
        
@@ -221,13 +232,21 @@ class ViewController: UIViewController {
     
     @IBAction func btnPlusAction(_ sender: Any) {
         
-        oprCnt = 1
+        oprColorCnt = 1
+        operater = "+"
+        operate()
+
         initializeColor()
         setColor(button: buttonPlu)
         
     }
     
     @IBAction func btnResultAction(_ sender: Any) {
+        
+        operate()
+        oprFirst = true
+        result.text = String(operateTemp)
+        
         
     }
     
@@ -261,33 +280,68 @@ class ViewController: UIViewController {
     
     func isEnableOpr(){ // 연산자 클릭 시 label 초기화
         
-        if oprCnt == 1 {
+        if oprColorCnt == 1 {
             result.text = ""
-            oprCnt = 0
+            oprColorCnt = 0
         }
     }
     
-    func confirmZero(){ // 초기 숫자 설정
+    func confirmZero(){ // 첫 숫자 버튼 클릭 시 0 제외
         
         if result.text == "0"{
             result.text = ""
         }
     }
     
-    func saveTemp(){ // 연산할 데이터 저장
+    
+    func operate(){ // 연산 로직
         
-        if saveCnt == 0{
-            leftTemp = Int(result.text!)
-            saveCnt = 1
-        }
+        let resultToInt = Int(result.text!)!
         
-        else{
-            rightTemp = Int(result.text!)
-            saveCnt = 0
+        switch operater{
+        case "/":
+            
+            if(oprFirst == true){ //초기 값 일 시 연산을 하지않고 대입만 함
+                operateTemp = resultToInt
+                oprFirst = false
+            }
+            else{
+                operateTemp = operateTemp / resultToInt
+            }
+      
+        case "x":
+           
+            if(oprFirst == true){
+                operateTemp = resultToInt
+                oprFirst = false
+            }
+            else{
+                operateTemp = operateTemp * resultToInt
+            }
 
-        }
+        case "-":
+            
+            if(oprFirst == true){
+                operateTemp = resultToInt
+                oprFirst = false
+            }
+            else{
+                operateTemp = operateTemp - resultToInt
+            }
+            
+        case "+":
+            
+            if(oprFirst == true){
+                operateTemp = resultToInt
+                oprFirst = false
+            }
+            else{
+                operateTemp = operateTemp + resultToInt
+            }
 
-        
+        default:
+            break
+        }
     }
     
 
