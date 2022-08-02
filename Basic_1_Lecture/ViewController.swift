@@ -176,8 +176,13 @@ class ViewController: UIViewController {
         
         initializeColor()
         result.text = "0"
-        operateTemp = 0
+        operateTempFloat = 0
+    }
+    
+    @IBAction func btnPercentAction(_ sender: Any) {
         
+        let percent = Float(result.text!)! / 100
+        result.text = String(percent)
     }
     
     @IBAction func btnDivisionAction(_ sender: Any) {
@@ -188,9 +193,6 @@ class ViewController: UIViewController {
         
         initializeColor()
         setColor(button: buttonDiv)
-        
-        
-        
     }
     
     @IBAction func btnMultipleAction(_ sender: Any) {
@@ -229,8 +231,8 @@ class ViewController: UIViewController {
         
         operate()
         oprFirst = true
-        result.text = String(operateTemp)
         
+        resultCasting()
         
     }
     
@@ -325,6 +327,22 @@ class ViewController: UIViewController {
 
         default:
             break
+        }
+        
+    }
+    
+    func resultCasting(){ // .0 으로 끝나는 float형은 정수로 캐스팅, float형일시 소수 2자리까지
+        
+        let decimalIndex = String(operateTempFloat).lastIndex(of: ".")
+        let decimal = String(operateTempFloat)[decimalIndex!...]
+    
+        if decimal == ".0" {
+            operateTempInt = Int(operateTempFloat)
+            result.text = String(operateTempInt)
+        }
+        else{
+            operateTempFloat = Float(String(format: "%.2f", operateTempFloat))!
+            result.text = String(operateTempFloat)
         }
     }
     
