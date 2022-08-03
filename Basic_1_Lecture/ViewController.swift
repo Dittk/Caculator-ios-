@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  Basic_1_Lecture
-//
-//  Created by 윤형석 on 2022/07/29.
-//
+//Caculate 
 
 import UIKit
 
@@ -49,40 +44,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     
         result.layer.cornerRadius = 50
-        result.layer.masksToBounds = true
-        // 코너 radius 변경이 안될 시 선언
+        result.layer.masksToBounds = true  // 코너 radius 변경이 안될 시 선언
     }
 
-    override func viewDidAppear(_ animated: Bool) { // 버튼에 대한 속성(button1.bounds.width)으로 접근 시  appear 후에 적용
+    override func viewDidAppear(_ animated: Bool) { // 버튼에 대한 속성(button1.bounds.width)으로 접근 시 이 메서드에
         super.viewDidAppear(animated)
+        initializeShape() // 모든 버튼 radius 둥굴게 수정
         
-        buttonAc.layer.cornerRadius = button1.bounds.width / 2
-        buttonPm.layer.cornerRadius = button1.bounds.width / 2
-        buttonPerc.layer.cornerRadius = button1.bounds.width / 2
-        buttonDiv.layer.cornerRadius = button1.bounds.width / 2
-        
-        button1.layer.cornerRadius = button1.bounds.width / 2
-        button2.layer.cornerRadius = button1.bounds.width / 2
-        button3.layer.cornerRadius = button1.bounds.width / 2
-        buttonMul.layer.cornerRadius = button1.bounds.width / 2
-        
-        button4.layer.cornerRadius = button1.bounds.width / 2
-        button5.layer.cornerRadius = button1.bounds.width / 2
-        button6.layer.cornerRadius = button1.bounds.width / 2
-        buttonMin.layer.cornerRadius = button1.bounds.width / 2
-        
-        button7.layer.cornerRadius = button1.bounds.width / 2
-        button8.layer.cornerRadius = button1.bounds.width / 2
-        button9.layer.cornerRadius = button1.bounds.width / 2
-        buttonPlu.layer.cornerRadius = button1.bounds.width / 2
-        
-        button10.layer.cornerRadius = button1.bounds.width / 2
-        button11.layer.cornerRadius = button1.bounds.width / 2
-        buttonEql.layer.cornerRadius = button1.bounds.width / 2
     }
     
     // 숫자 버튼 영역 시작
-    @IBAction func btn1Action(_ sender: Any) {
+    @IBAction func btn1Action(_ sender: Any) { //숫자 7 버튼
         
         confirmZero()
         isEnableOpr()
@@ -90,7 +62,7 @@ class ViewController: UIViewController {
         result.text?.append("7")
     }
     
-    @IBAction func btn2Action(_ sender: Any) {
+    @IBAction func btn2Action(_ sender: Any) { //숫자 8 버튼
         
         confirmZero()
         isEnableOpr()
@@ -98,7 +70,7 @@ class ViewController: UIViewController {
         result.text?.append("8")
     }
     
-    @IBAction func btn3Action(_ sender: Any) {
+    @IBAction func btn3Action(_ sender: Any) { //숫자 9 버튼
         
         confirmZero()
         isEnableOpr()
@@ -106,7 +78,7 @@ class ViewController: UIViewController {
         result.text?.append("9")
     }
     
-    @IBAction func btn4Action(_ sender: Any) {
+    @IBAction func btn4Action(_ sender: Any) { //숫자 4 버튼
         
         confirmZero()
         isEnableOpr()
@@ -114,7 +86,7 @@ class ViewController: UIViewController {
         result.text?.append("4")
     }
     
-    @IBAction func btn5Action(_ sender: Any) {
+    @IBAction func btn5Action(_ sender: Any) { //숫자 5 버튼
         
         confirmZero()
         isEnableOpr()
@@ -122,7 +94,7 @@ class ViewController: UIViewController {
         result.text?.append("5")
     }
     
-    @IBAction func btn6Action(_ sender: Any) {
+    @IBAction func btn6Action(_ sender: Any) { //숫자 6 버튼
         
         confirmZero()
         isEnableOpr()
@@ -130,7 +102,7 @@ class ViewController: UIViewController {
         result.text?.append("6")
     }
     
-    @IBAction func btn7Action(_ sender: Any) {
+    @IBAction func btn7Action(_ sender: Any) { //숫자 1 버튼
         
         confirmZero()
         isEnableOpr()
@@ -138,7 +110,7 @@ class ViewController: UIViewController {
         result.text?.append("1")
     }
     
-    @IBAction func btn8Action(_ sender: Any) {
+    @IBAction func btn8Action(_ sender: Any) { //숫자 2 버튼
         
         confirmZero()
         isEnableOpr()
@@ -146,7 +118,7 @@ class ViewController: UIViewController {
         result.text?.append("2")
     }
     
-    @IBAction func btn9Action(_ sender: Any) {
+    @IBAction func btn9Action(_ sender: Any) { // 숫자 3 버튼
         
         confirmZero()
         isEnableOpr()
@@ -154,7 +126,7 @@ class ViewController: UIViewController {
         result.text?.append("3")
     }
     
-    @IBAction func btn0Action(_ sender: Any) {
+    @IBAction func btn0Action(_ sender: Any) { // 숫자 0 버튼
         
         confirmZero()
         isEnableOpr()
@@ -162,7 +134,7 @@ class ViewController: UIViewController {
         result.text?.append("0")
     }
     
-    @IBAction func btnDotAction(_ sender: Any) { //Detail
+    @IBAction func btnDotAction(_ sender: Any) { // . 버튼
        
         if !(result.text!.contains(".")) {
             result.text?.append(".")
@@ -239,6 +211,32 @@ class ViewController: UIViewController {
     
     // 연산자 버튼 영역 끝
     
+    func initializeShape(){
+        
+        buttonAc.layer.cornerRadius = button1.bounds.width / 2
+        buttonPm.layer.cornerRadius = button1.bounds.width / 2
+        buttonPerc.layer.cornerRadius = button1.bounds.width / 2
+        buttonDiv.layer.cornerRadius = button1.bounds.width / 2
+        
+        button1.layer.cornerRadius = button1.bounds.width / 2
+        button2.layer.cornerRadius = button1.bounds.width / 2
+        button3.layer.cornerRadius = button1.bounds.width / 2
+        buttonMul.layer.cornerRadius = button1.bounds.width / 2
+        
+        button4.layer.cornerRadius = button1.bounds.width / 2
+        button5.layer.cornerRadius = button1.bounds.width / 2
+        button6.layer.cornerRadius = button1.bounds.width / 2
+        buttonMin.layer.cornerRadius = button1.bounds.width / 2
+        
+        button7.layer.cornerRadius = button1.bounds.width / 2
+        button8.layer.cornerRadius = button1.bounds.width / 2
+        button9.layer.cornerRadius = button1.bounds.width / 2
+        buttonPlu.layer.cornerRadius = button1.bounds.width / 2
+        
+        button10.layer.cornerRadius = button1.bounds.width / 2
+        button11.layer.cornerRadius = button1.bounds.width / 2
+        buttonEql.layer.cornerRadius = button1.bounds.width / 2
+    }
     
     
     func initializeColor() { // 연산자 색상 속성 초기화
@@ -254,8 +252,8 @@ class ViewController: UIViewController {
         
         buttonPlu.setTitleColor(.white, for: .normal)
         buttonPlu.backgroundColor = .systemOrange
-        
     }
+    
     
     func setColor(button: UIButton)  { // 연산자 클릭 시 버튼 색 변경
     
@@ -264,6 +262,7 @@ class ViewController: UIViewController {
       
     }
     
+    
     func isEnableOpr(){ // 연산자 클릭 시 label 초기화
         
         if oprColorCnt == 1 {
@@ -271,6 +270,7 @@ class ViewController: UIViewController {
             oprColorCnt = 0
         }
     }
+    
     
     func confirmZero(){ // 첫 숫자 버튼 클릭 시 0 제외
         
@@ -345,6 +345,4 @@ class ViewController: UIViewController {
             result.text = String(operateTempFloat)
         }
     }
-    
-
 }
