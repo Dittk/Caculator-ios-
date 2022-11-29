@@ -60,61 +60,6 @@
        > 연산자 버튼 클릭시 색상 변경 카운트
 
        > 첫 데이터 삽입 시 '0'으로 set
-       
-       ```swift
-        func operate(){ // 연산 로직
-        
-          let resultToFloat = Float(result.text!)!
-        
-          switch operater{
-          case "/":
-            
-            if(oprFirst == true){ //초기 값 일 시 연산을 하지않고 대입만 함
-                operateTempFloat = resultToFloat
-                oprFirst = false
-            }
-            else{
-                operateTempFloat = operateTempFloat / resultToFloat
-            }
-      
-          case "x":
-           
-            if(oprFirst == true){
-                operateTempFloat = resultToFloat
-                oprFirst = false
-            }
-            else{
-                operateTempFloat = operateTempFloat * resultToFloat
-            }
-
-          case "-":
-            
-            if(oprFirst == true){
-                operateTempFloat = resultToFloat
-                oprFirst = false
-            }
-            else{
-                operateTempFloat = operateTempFloat - resultToFloat
-            }
-            
-          case "+":
-            
-            if(oprFirst == true){
-                operateTempFloat = resultToFloat
-                oprFirst = false
-            }
-            else{
-                operateTempFloat = operateTempFloat + resultToFloat
-            }
-
-          default:
-            break
-          }   
-      }
-      ```
-        
-       > **연산 로직**, 버튼 클릭 시 연산자에 대한 '문자'를 가져온 후 '문자'에 대한 연산 처리
-        
         
        ## 느낀점
        
